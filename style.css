@@ -1,0 +1,191 @@
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.bg-pink {
+  background-color: #ffeaf7 !important;
+}
+
+.btn-pink {
+  background-color: #212529;
+  border: 2px solid transparent;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  color: #efeded;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 100%;
+  font-family: "Pacifico", cursive;
+}
+
+.btn-pink:hover {
+  background-color: #ffeaf7;
+  color: #212529;
+  border-color: #212529;
+  border-style: solid;
+  border-width: 2px;
+  font-weight: bold;
+}
+
+.btn-disabled {
+  background-color: #ffeaf7;
+  border: 2px solid transparent;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  border-color: #212529;
+  color: #212529;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 100%;
+  font-family: "Pacifico", cursive;
+}
+
+.font {
+  font-family: "Pacifico", cursive;
+}
+
+h4,
+h1 {
+  font-family: "Pacifico", cursive;
+}
+
+.ml-3 {
+  margin-left: 1rem !important;
+}
+
+.element {
+  background-image: url("images/pink2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffeaf7;
+  min-height: 100vh;
+}
+
+.zoom {
+  transition: transform 0.2s;
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  transform: scale(0.95);
+  color: #ff66c4;
+}
+
+.navbar-toggler {
+  color: #212529;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  color: #212921;
+}
+
+/* plan.php */
+.place-table {
+  table-layout: fixed;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.place-table td {
+  width: 50%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.place-image {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.styled-table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.styled-table th {
+  background-color: #f4f4f4;
+}
+
+.activity-image {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.btn-arrow {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 30px;
+}
+
+.btn-remove {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 25px;
+}
+
+/* TIME  */
+.unset-time-pink {
+  border: 2px dashed #ff66c4;
+  background-color: #ffeaf7;
+  color: #70706f;
+}
+/*confetti*/
+.fire {
+  background: #ffeaf7;
+  color: #ff66c4;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 8px 32px;
+  width: 155px;
+  border: 2px solid #ff66c4;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  font-family: "Pacifico", cursive;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.fire:hover {
+  transform: scale(0.95);
+}
+
+.heart {
+  border:none;
+  background-color:#ffd7f0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  font-family: "Pacifico", cursive;
+}
+
+.heart:hover {
+  transform: scale(0.95);
+}
