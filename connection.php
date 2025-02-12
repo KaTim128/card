@@ -104,27 +104,35 @@ if (!$retval) {
 
 // INSERT INTO morning (morning_name, morning_image) VALUES
 // ('Badminton', '222.jpg'),
-// ('Shopping', 'sunway.jpg'),
+// ('Shopping Mall', 'sunway.jpg'),
 // ('Dessert', 'meal.jpg'),
 // ('Karaoke', 'karaoke.jpg'),
-// ('Breakfast', 'breakfast.jpg');
+// ('Breakfast', 'breakfast.jpg'),
+// ('Picnic', 'picnic.jpg'),
+// ('Hiking', 'hiking.jpg'),
+// ('Cafe hopping', 'cafe.jpg'),
+// ('Gaming','game.jpg'),
 // ('Bowling', 'bowling.jpg');
 
 // INSERT INTO afternoon (afternoon_name, afternoon_image) VALUES
 // ('Badminton', '222.jpg'),
-// ('Shopping', 'sunway.jpg'),
+// ('Shopping Mall', 'sunway.jpg'),
 // ('Dinner', 'dinner.jpg'),
 // ('Dessert', 'meal.jpg'),
+// ('Gaming','game.jpg'),
 // ('Lunch', 'lunch.jpg'),
+// ('Movie', 'cinema.jpg'),
 // ('Karaoke', 'karaoke.jpg'),
 // ('Bowling', 'bowling.jpg');
 
 // INSERT INTO night (night_name, night_image) VALUES
 // ('Badminton', '222.jpg'),
-// ('Shopping', 'sunway.jpg'),
+// ('Shopping Mall', 'sunway.jpg'),
+// ('Gaming','game.jpg'),
 // ('Dinner', 'dinner.jpg'),
 // ('Dessert', 'meal.jpg'),
 // ('Karaoke', 'karaoke.jpg'),
+// ('Movie', 'cinema.jpg'),
 // ('Bowling', 'bowling.jpg');
 
 

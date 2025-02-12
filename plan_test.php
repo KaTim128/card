@@ -217,7 +217,7 @@ if ($hasActivities) {
         echo '</tbody></table>';
     }
 } else {
-    echo '<p class="font"; style="text-align: center; font-size: 18px; font-weight: bold; color: #ff66c4; margin:50px;">Ooo you have to add in some ideas my love! 🌹 <img class="zoom"
+    echo '<p class="font"; style="text-align: center; font-size: 18px; font-weight: bold; color: #ff66c4; margin-top:50px;">Ooo you have to add in some ideas my love! 🌹 <img class="zoom"
                     src="https://media.giphy.com/media/DniPZt06139PZEsDn4/giphy.gif?cid=790b7611nxtcfjymng08wjp4hrq8xu3ga15ojeeqwzpb9y7h&ep=v1_stickers_search&rid=giphy.gif&ct=s"
                     alt="Animated GIF" style=" height: 50px;"></p>';
 
