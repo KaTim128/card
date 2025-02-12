@@ -1,3 +1,29 @@
+/* Ensures spacing and padding are consistent */
+body {
+  background-color: #ffeaf7;
+}
+
+/* Responsive header images */
+.zoom {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Stack images vertically on smaller screens */
+@media (max-width: 576px) {
+  .heart {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .zoom {
+    height: 40px !important;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .no-padding {
   padding-left: 0;
   padding-right: 0;
@@ -118,6 +144,15 @@ h1 {
   border: 1px solid #ddd;
 }
 
+@media (max-width: 576px) {
+  .styled-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
 .styled-table th,
 .styled-table td {
   padding: 12px;
@@ -125,8 +160,96 @@ h1 {
   white-space: nowrap;
 }
 
+@media (max-width: 576px) {
+  .styled-table th,
+  .styled-table td {
+    padding: 8px; /* Reduce padding */
+    font-size: 14px; /* Reduce font size */
+  }
+}
+
 .styled-table th {
   background-color: #f4f4f4;
+}
+
+@media (max-width: 576px) {
+  .styled-table,
+  .styled-table thead,
+  .styled-table tbody,
+  .styled-table th,
+  .styled-table td,
+  .styled-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .styled-table thead tr {
+    display: none; /* Hide table headers */
+  }
+
+  .styled-table tr {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #fff;
+  }
+
+  .styled-table td {
+    text-align: left;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .styled-table td::before {
+    content: attr(data-label); /* Add labels dynamically */
+    font-weight: bold;
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .styled-table,
+  .styled-table thead,
+  .styled-table tbody,
+  .styled-table th,
+  .styled-table td,
+  .styled-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .styled-table thead tr {
+    display: none; /* Hide table headers */
+  }
+
+  .styled-table tr {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #fff;
+  }
+
+  .styled-table td {
+    text-align: left;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .styled-table td::before {
+    content: attr(data-label); /* Add labels dynamically */
+    font-weight: bold;
+    flex-basis: 50%;
+  }
 }
 
 .activity-image {
@@ -178,8 +301,8 @@ h1 {
 }
 
 .heart {
-  border:none;
-  background-color:#ffd7f0;
+  border: none;
+  background-color: #ffd7f0;
   cursor: pointer;
   transition: transform 0.3s ease;
   border-radius: 10px;

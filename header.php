@@ -17,13 +17,13 @@
         <div class="p-4 text-center no-padding" style="background-color:#ffd7f0;">
             <h1 class="container-fluid text-center mt-1"
                 style="color:#ff66c4; display: flex; align-items: center; justify-content: center;">
-                <img class="zoom"
+                <img class="zoom d-none d-sm-inline"
                     src="https://media.giphy.com/media/12PXNbcHW8C9Bm/giphy.gif?cid=790b7611bihh336e3vh24zn7tr8p2rkfy4ckxzlch40cmk7h&ep=v1_stickers_search&rid=giphy.gif&ct=s"
                     alt="Animated GIF" style=" height: 50px;">
-                <img class="zoom"
+                <img class="zoom d-none d-sm-inline"
                     src="https://media.giphy.com/media/12PXNbcHW8C9Bm/giphy.gif?cid=790b7611bihh336e3vh24zn7tr8p2rkfy4ckxzlch40cmk7h&ep=v1_stickers_search&rid=giphy.gif&ct=s"
                     alt="Animated GIF" style=" height: 80px;">
-                <img class="zoom"
+                <img class="zoom d-none d-sm-inline"
                     src="https://media.giphy.com/media/12PXNbcHW8C9Bm/giphy.gif?cid=790b7611bihh336e3vh24zn7tr8p2rkfy4ckxzlch40cmk7h&ep=v1_stickers_search&rid=giphy.gif&ct=s"
                     alt="Animated GIF" style=" height: 110px;">
                 <button class="heart zoom mx-4" style="color:#ff66c4;"><b>Valentines Date</b></button>
@@ -61,13 +61,13 @@
                         });
                     })
                 </script>
-                <img class="zoom"
+                <img class="zoom d-none d-sm-inline"
                     src="https://media.giphy.com/media/12PXNbcHW8C9Bm/giphy.gif?cid=790b7611bihh336e3vh24zn7tr8p2rkfy4ckxzlch40cmk7h&ep=v1_stickers_search&rid=giphy.gif&ct=s"
                     alt="Animated GIF" style=" height: 110px;">
-                <img class="zoom"
+                <img class="zoom d-none d-sm-inline"
                     src="https://media.giphy.com/media/12PXNbcHW8C9Bm/giphy.gif?cid=790b7611bihh336e3vh24zn7tr8p2rkfy4ckxzlch40cmk7h&ep=v1_stickers_search&rid=giphy.gif&ct=s"
                     alt="Animated GIF" style=" height: 80px;">
-                <img class="zoom"
+                <img class="zoom d-none d-sm-inline"
                     src="https://media.giphy.com/media/12PXNbcHW8C9Bm/giphy.gif?cid=790b7611bihh336e3vh24zn7tr8p2rkfy4ckxzlch40cmk7h&ep=v1_stickers_search&rid=giphy.gif&ct=s"
                     alt="Animated GIF" style=" height: 50px;">
             </h1>
