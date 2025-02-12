@@ -30,10 +30,10 @@ if ($hasActivities) {
         echo '<table class="styled-table" id="morningTable">';
         echo '<thead>
             <tr>
+                <th class="bg-pink">Time of Day</th>
                 <th class="bg-pink">From</th>
                 <th class="bg-pink">To</th>
                 <th class="bg-pink">Place</th>
-                <th class="bg-pink">Time of Day</th>
                 <th class="bg-pink">Actions</th>
             </tr>
           </thead>';
@@ -48,6 +48,7 @@ if ($hasActivities) {
             $morning_end_time = $row["morning_end_time"] ?? '';
 
             echo '<tr data-id="' . $morning_id . '" data-timeofday="Morning">';
+            echo '<td style="color:#7ed957";"><b>Morning</b></td>';
             echo '<td>
                 <input type="time" class="time-picker from-time"
                     value="' . (!empty($morning_start_time) ? date('H:i', strtotime($morning_start_time)) : '') . '" 
@@ -64,8 +65,6 @@ if ($hasActivities) {
                   <span><b>' . $morning_name . '</b></span>
               </div>
             </td>';
-
-            echo '<td style="color:#7ed957";"><b>Morning</b></td>';
             // echo '<td>' . $morning_location . '</td>';
             echo '<td>
                 <button class="move-up zoom btn-arrow">⬆️</button>
@@ -101,10 +100,10 @@ if ($hasActivities) {
         echo '<table class="styled-table" id="afternoonTable">';
         echo '<thead class="">
             <tr class="bg-pink">
+                <th class="bg-pink">Time of Day</th>
                 <th class="bg-pink">From</th>
                 <th class="bg-pink">To</th>
                 <th class="bg-pink">Place</th>
-                <th class="bg-pink">Time of Day</th>
                 <th class="bg-pink">Actions</th>
             </tr>
           </thead>';
@@ -119,6 +118,7 @@ if ($hasActivities) {
             $afternoon_end_time = $row["afternoon_end_time"] ?? '';
 
             echo '<tr data-id="' . $afternoon_id . '" data-timeofday="Afternoon">';
+            echo '<td style="color:#ffb340;"><b>Afternoon</b></td>';
             echo '<td>
                 <input type="time" class="time-picker from-time"
                     value="' . (!empty($afternoon_start_time) ? date('H:i', strtotime($afternoon_start_time)) : '') . '" 
@@ -135,7 +135,6 @@ if ($hasActivities) {
                   <span><b>' . $afternoon_name . '</b></span>
               </div>
             </td>';
-            echo '<td style="color:#ffb340;"><b>Afternoon</b></td>';
             // echo '<td>' . $afternoon_location . '</td>';
             echo '<td>
                 <button class="move-up zoom btn-arrow">⬆️</button>
@@ -171,10 +170,10 @@ if ($hasActivities) {
         echo '<table class="styled-table" id="nightTable">';
         echo '<thead>
             <tr>
+                <th class="bg-pink">Time of Day</th>
                 <th class="bg-pink">From</th>
                 <th class="bg-pink">To</th>
                 <th class="bg-pink">Place</th>
-                <th class="bg-pink">Time of Day</th>
                 <th class="bg-pink">Actions</th>
             </tr>
           </thead>';
@@ -189,6 +188,7 @@ if ($hasActivities) {
             $night_end_time = $row["night_end_time"] ?? '';
 
             echo '<tr data-id="' . $night_id . '" data-timeofday="night">';
+            echo '<td style="color:#5760d9;"><b>Night</b></td>';
             echo '<td>
                 <input type="time" class="time-picker from-time"
                     value="' . (!empty($night_start_time) ? date('H:i', strtotime($night_start_time)) : '') . '" 
@@ -205,7 +205,6 @@ if ($hasActivities) {
                   <span><b>' . $night_name . '</b></span>
               </div>
             </td>';
-            echo '<td style="color:#5760d9;"><b>Night</b></td>';
             // echo '<td>' . $night_location . '</td>';
             echo '<td>
                 <button class="move-up zoom btn-arrow">⬆️</button>
