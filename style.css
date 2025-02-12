@@ -312,3 +312,19 @@ h1 {
 .heart:hover {
   transform: scale(0.95);
 }
+
+.valentine-text {
+  font-size: 16px; /* Default size */
+}
+
+@media (max-width: 768px) {
+  .valentine-text {
+    font-size: 24px; /* Larger text for mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .valentine-text {
+    font-size: 28px; /* Even larger for smaller screens */
+  }
+}
