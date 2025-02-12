@@ -314,7 +314,7 @@ h1 {
 }
 
 .valentine-text {
-  font-size: 16px; /* Default size */
+  font-size: 60px; /* Default size */
 }
 
 @media (max-width: 768px) {
