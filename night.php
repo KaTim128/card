@@ -51,7 +51,8 @@
 
             <div class="col-md-4">
                 <div class='m-4' style="border: 2px solid #000; border-radius:10px;">
-                    <div style='background-color:pink; width:100%; height:300px; position: relative; overflow: hidden;'>
+                    <div
+                        style='background-color:pink; width:100%; height:300px; position: relative; overflow: hidden;  border-radius:10px;'>
                         <img src="./images/<?= $night_image ?>"
                             style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
                         <div

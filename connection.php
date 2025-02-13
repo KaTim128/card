@@ -112,7 +112,9 @@ if (!$retval) {
 // ('Hiking', 'hiking.jpg'),
 // ('Cafe hopping', 'cafe.jpg'),
 // ('Gaming','game.jpg'),
-// ('Bowling', 'bowling.jpg');
+// ('Gaming','game.jpg'),
+// ('Bowling', 'bowling.jpg'),
+// ('Something Else', 'images.png');
 
 // INSERT INTO afternoon (afternoon_name, afternoon_image) VALUES
 // ('Badminton', '222.jpg'),
@@ -123,7 +125,8 @@ if (!$retval) {
 // ('Lunch', 'lunch.jpg'),
 // ('Movie', 'cinema.jpg'),
 // ('Karaoke', 'karaoke.jpg'),
-// ('Bowling', 'bowling.jpg');
+// ('Bowling', 'bowling.jpg'),
+// ('Something Else', 'images.png');
 
 // INSERT INTO night (night_name, night_image) VALUES
 // ('Badminton', '222.jpg'),
@@ -133,7 +136,8 @@ if (!$retval) {
 // ('Dessert', 'meal.jpg'),
 // ('Karaoke', 'karaoke.jpg'),
 // ('Movie', 'cinema.jpg'),
-// ('Bowling', 'bowling.jpg');
+// ('Bowling', 'bowling.jpg'),
+// ('Something Else', 'images.png');
 
 
 ?>
