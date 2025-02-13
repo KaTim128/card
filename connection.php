@@ -112,7 +112,6 @@ if (!$retval) {
 // ('Hiking', 'hiking.jpg'),
 // ('Cafe hopping', 'cafe.jpg'),
 // ('Gaming','game.jpg'),
-// ('Gaming','game.jpg'),
 // ('Bowling', 'bowling.jpg'),
 // ('Something Else', 'images.png');
 
