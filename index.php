@@ -1,5 +1,9 @@
 <?php require("connection.php"); ?>
-<?php require("header.php"); ?>
+<?php require("header.php");
+if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
+    header("Location: lock.php");
+    exit();
+} ?>
 <nav class="navbar navbar-expand-sm bg-pink" style="background-color:#ffeaf7;">
     <div class="container bg-pink">
         <ul class="navbar-nav align-items-center mx-auto" style="width: fit-content;">
@@ -51,7 +55,8 @@
 
             <div class="col-md-4">
                 <div class='m-4' style="border: 2px solid #000; border-radius:10px;">
-                    <div style='background-color:pink; width:100%; height:300px; position: relative; overflow: hidden;  border-radius:10px;'>
+                    <div
+                        style='background-color:pink; width:100%; height:300px; position: relative; overflow: hidden;  border-radius:10px;'>
                         <img src="./images/<?= $morning_image ?>"
                             style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
                         <div
@@ -102,6 +107,24 @@
                 }
             })
             .catch(error => console.error('Error:', error));
+    }
+
+    if (localStorage.getItem("dateAccepted") === "true") {
+        localStorage.removeItem("dateAccepted"); // Remove flag after use
+
+        const defaults = {
+            spread: 360,
+            ticks: 100,
+            gravity: 0,
+            decay: 0.94,
+            startVelocity: 30,
+            shapes: ["heart"],
+            colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
+        };
+
+        confetti({ ...defaults, particleCount: 50, scalar: 2 });
+        confetti({ ...defaults, particleCount: 25, scalar: 3 });
+        confetti({ ...defaults, particleCount: 10, scalar: 4 });
     }
 
 </script>

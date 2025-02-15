@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION["authenticated"]) || $_SESSION["authenticated"] !== true) {
+    header("Location: lock.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,8 +94,8 @@
                         </a>
                     </li>
                     <!-- <li class="nav-item">
-                        <a class="nav-link font active mx-5" href="add.php">
-                            <h5><b>Add</b></h5>
+                        <a class="nav-link font active mx-5" href="random.php">
+                            <h5><b>Random👽</b></h5>
                         </a>
                     </li> -->
                 </ul>

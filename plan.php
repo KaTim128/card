@@ -5,6 +5,7 @@ require("header.php");
 
 <?php
 $hasActivities = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM plans")) > 0;
+
 if ($hasActivities) {
 
     // Morning Activities
@@ -217,14 +218,22 @@ if ($hasActivities) {
         echo '</tbody></table>';
     }
 } else {
-    echo '<p class="font"; style="text-align: center; font-size: 18px; font-weight: bold; color: #ff66c4; margin:50px;">Ooo you have to add in some ideas my love! 🌹 <img class="zoom"
+    echo '<p class="font"; style="text-align: center; font-size: 18px; font-weight: bold; color: #ff66c4; margin:60px;">Add in some ideas and I will do the rest for you my love! 🌹 <img class="zoom"
                     src="https://media.giphy.com/media/DniPZt06139PZEsDn4/giphy.gif?cid=790b7611nxtcfjymng08wjp4hrq8xu3ga15ojeeqwzpb9y7h&ep=v1_stickers_search&rid=giphy.gif&ct=s"
                     alt="Animated GIF" style=" height: 50px;"></p>';
 
 }
 ?>
-<script>
+<?php if ($hasActivities) { ?>
+    <div class="d-flex justify-content-center"> <!-- Centering container -->
+        <a id="doneButton" class="font my-5 btn btn-done py-2 mx-5 d-flex align-items-center justify-content-center"
+            href="left.php" style="border-radius: 8px; font-size: 1rem; font-weight: 600;">
+            Lock In 👽🍷
+        </a>
+    </div>
+<?php } ?>
 
+<script>
     $(document).ready(function () {
         $(".time-picker").change(function () {
             var newTime = $(this).val(); // Get new time
@@ -320,4 +329,67 @@ if ($hasActivities) {
             });
         });
     });
+
+    $(document).ready(function () {
+        $(".btn-remove").click(function () {
+            var row = $(this).closest("tr");
+            var table = row.closest("table");
+            var activityId = row.data("id");
+
+            // Remove the activity via AJAX
+            $.ajax({
+                url: "remove_activity.php", // Adjust this to your actual removal script
+                type: "POST",
+                data: { id: activityId },
+                success: function (response) {
+                    row.remove(); // Remove row from table
+
+                    // If table is empty after removal, remove the table
+                    if (table.find("tbody tr").length === 0) {
+                        table.remove();
+                    }
+
+                    // Check if any table remains
+                    if ($("table.styled-table").length === 0) {
+                        $("#doneButton").remove(); // Remove the Done button if no tables exist
+                    }
+                }
+            });
+        });
+    });
+
+
+    $(document).ready(function () {
+        $("#doneButton").click(function (e) {
+            e.preventDefault();
+            showCustomAlert("Can't wait to see you muah 😘", $(this).attr("href"));
+        });
+    });
+
+    function showCustomAlert(message, redirectUrl) {
+        let alertBox = `
+        <div id="customAlert" class="custom-alert">
+            <div class="custom-alert-content">
+                <p>${message}</p>
+                <button id="customAlertClose">OK</button>
+            </div>
+        </div>
+    `;
+
+        $("body").append(alertBox);
+        $("#customAlert").fadeIn(300);
+
+        $("#customAlertClose").click(function () {
+            $("#customAlert").fadeOut(300, function () {
+                $(this).remove();
+                if (redirectUrl) {
+                    window.location.href = redirectUrl;
+                }
+            });
+        });
+    }
+
+
+
+
 </script>

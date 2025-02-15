@@ -67,6 +67,63 @@ body {
   font-family: "Pacifico", cursive;
 }
 
+.btn-lock {
+  background-color: #ffeaf7;
+  border: 2px solid #212529;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  color: #212529;
+  font-weight: bold;
+  border-radius: 12px;
+  width: fit-content; /* Adjusts to content size */
+  min-width: 160px; /* Ensures button isn't too small */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  cursor: pointer;
+}
+
+.btn-lock:hover {
+  background-color: #ff66c4;
+  color: #ffeaf7;
+  border-color: #ffeaf7;
+  transform: scale(1.05); /* Slight pop effect */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.btn-done {
+  background-color: #ffeaf7;
+  border: 2px solid #212529;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  color: #212529;
+  font-weight: bold;
+  border-radius: 12px;
+  width: fit-content; /* Adjusts to content size */
+  min-width: 160px; /* Ensures button isn't too small */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  cursor: pointer;
+}
+
+.btn-done:hover {
+  background-color: #ff66c4;
+  color: #ffeaf7;
+  border-color: #ffeaf7;
+  transform: scale(1.05); /* Slight pop effect */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.btn-done:active {
+  transform: scale(0.98); /* Click effect */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .font {
   font-family: "Pacifico", cursive;
 }
@@ -327,4 +384,52 @@ h1 {
   .valentine-text {
     font-size: 25px; /* Even larger for smaller screens */
   }
+}
+
+.custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.custom-alert-content {
+  background: linear-gradient(135deg, #ff66c4, #ffb340);
+  padding: 25px 35px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  width: 320px;
+  position: relative;
+  transform: translate(0, 0); /* Ensure it's centered properly */
+}
+
+.custom-alert-content p {
+  margin: 15px 0;
+}
+
+#customAlertClose {
+  background: white;
+  color: #ff66c4;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#customAlertClose:hover {
+  background: #ff66c4;
+  color: white;
 }
