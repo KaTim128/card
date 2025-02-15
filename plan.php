@@ -32,8 +32,6 @@ if ($hasActivities) {
         echo '<thead>
             <tr>
                 <th class="bg-pink">Time of Day</th>
-                <th class="bg-pink">From</th>
-                <th class="bg-pink">To</th>
                 <th class="bg-pink">Place</th>
                 <th class="bg-pink">Actions</th>
             </tr>
@@ -50,16 +48,16 @@ if ($hasActivities) {
 
             echo '<tr data-id="' . $morning_id . '" data-timeofday="Morning">';
             echo '<td style="color:#7ed957";"><b>Morning</b></td>';
-            echo '<td>
-                <input type="time" class="time-picker from-time"
-                    value="' . (!empty($morning_start_time) ? date('H:i', strtotime($morning_start_time)) : '') . '" 
-                    data-id="' . $morning_id . '" data-timeofday="morning" min="00:00" >
-              </td>';
-            echo '<td>
-                <input type="time" class="time-picker to-time"
-                    value="' . (!empty($morning_end_time) ? date('H:i', strtotime($morning_end_time)) : '') . '" 
-                    data-id="' . $morning_id . '" data-timeofday="morning" min="00:00" >
-              </td>';
+            // echo '<td>
+            //     <input type="time" class="time-picker from-time"
+            //         value="' . (!empty($morning_start_time) ? date('H:i', strtotime($morning_start_time)) : '') . '" 
+            //         data-id="' . $morning_id . '" data-timeofday="morning" min="00:00" >
+            //   </td>';
+            // echo '<td>
+            //     <input type="time" class="time-picker to-time"
+            //         value="' . (!empty($morning_end_time) ? date('H:i', strtotime($morning_end_time)) : '') . '" 
+            //         data-id="' . $morning_id . '" data-timeofday="morning" min="00:00" >
+            //   </td>';
             echo '<td>
               <div style="text-align: center;">
                   <img src="./images/' . $morning_img . '" class="activity-image mb-2" style="display: block; margin: 0 auto;">
@@ -102,8 +100,6 @@ if ($hasActivities) {
         echo '<thead class="">
             <tr class="bg-pink">
                 <th class="bg-pink">Time of Day</th>
-                <th class="bg-pink">From</th>
-                <th class="bg-pink">To</th>
                 <th class="bg-pink">Place</th>
                 <th class="bg-pink">Actions</th>
             </tr>
@@ -120,16 +116,16 @@ if ($hasActivities) {
 
             echo '<tr data-id="' . $afternoon_id . '" data-timeofday="Afternoon">';
             echo '<td style="color:#ffb340;"><b>Afternoon</b></td>';
-            echo '<td>
-                <input type="time" class="time-picker from-time"
-                    value="' . (!empty($afternoon_start_time) ? date('H:i', strtotime($afternoon_start_time)) : '') . '" 
-                    data-id="' . $afternoon_id . '" data-timeofday="afternoon" min="12:00" >
-              </td>';
-            echo '<td>
-                <input type="time" class="time-picker to-time"
-                    value="' . (!empty($afternoon_end_time) ? date('H:i', strtotime($afternoon_end_time)) : '') . '" 
-                    data-id="' . $afternoon_id . '" data-timeofday="afternoon" min="12:00" >
-              </td>';
+            // echo '<td>
+            //     <input type="time" class="time-picker from-time"
+            //         value="' . (!empty($afternoon_start_time) ? date('H:i', strtotime($afternoon_start_time)) : '') . '" 
+            //         data-id="' . $afternoon_id . '" data-timeofday="afternoon" min="12:00" >
+            //   </td>';
+            // echo '<td>
+            //     <input type="time" class="time-picker to-time"
+            //         value="' . (!empty($afternoon_end_time) ? date('H:i', strtotime($afternoon_end_time)) : '') . '" 
+            //         data-id="' . $afternoon_id . '" data-timeofday="afternoon" min="12:00" >
+            //   </td>';
             echo '<td>
               <div style="text-align: center;">
                   <img src="./images/' . $afternoon_img . '" class="activity-image mb-2" style="display: block; margin: 0 auto;">
@@ -172,8 +168,6 @@ if ($hasActivities) {
         echo '<thead>
             <tr>
                 <th class="bg-pink">Time of Day</th>
-                <th class="bg-pink">From</th>
-                <th class="bg-pink">To</th>
                 <th class="bg-pink">Place</th>
                 <th class="bg-pink">Actions</th>
             </tr>
@@ -190,16 +184,16 @@ if ($hasActivities) {
 
             echo '<tr data-id="' . $night_id . '" data-timeofday="night">';
             echo '<td style="color:#5760d9;"><b>Night</b></td>';
-            echo '<td>
-                <input type="time" class="time-picker from-time"
-                    value="' . (!empty($night_start_time) ? date('H:i', strtotime($night_start_time)) : '') . '" 
-                    data-id="' . $night_id . '" data-timeofday="night" min="12:00" >
-              </td>';
-            echo '<td>
-                <input type="time" class="time-picker to-time"
-                    value="' . (!empty($night_end_time) ? date('H:i', strtotime($night_end_time)) : '') . '" 
-                    data-id="' . $night_id . '" data-timeofday="night" min="12:00" >
-              </td>';
+            // echo '<td>
+            //     <input type="time" class="time-picker from-time"
+            //         value="' . (!empty($night_start_time) ? date('H:i', strtotime($night_start_time)) : '') . '" 
+            //         data-id="' . $night_id . '" data-timeofday="night" min="12:00" >
+            //   </td>';
+            // echo '<td>
+            //     <input type="time" class="time-picker to-time"
+            //         value="' . (!empty($night_end_time) ? date('H:i', strtotime($night_end_time)) : '') . '" 
+            //         data-id="' . $night_id . '" data-timeofday="night" min="12:00" >
+            //   </td>';
             echo '<td>
               <div style="text-align: center;">
                   <img src="./images/' . $night_img . '" class="activity-image mb-2" style="display: block; margin: 0 auto;">

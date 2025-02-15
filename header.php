@@ -32,8 +32,8 @@ if (!isset($_SESSION["authenticated"]) || $_SESSION["authenticated"] !== true) {
                 <img class="zoom d-none d-sm-inline"
                     src="https://media.giphy.com/media/12PXNbcHW8C9Bm/giphy.gif?cid=790b7611bihh336e3vh24zn7tr8p2rkfy4ckxzlch40cmk7h&ep=v1_stickers_search&rid=giphy.gif&ct=s"
                     alt="Animated GIF" style=" height: 110px;">
-                <button class="heart zoom mx-2" style="color:#ff66c4;">
-                    <b class="valentine-text ">Valentines Date</b>
+                <button class="heart mx-2">
+                    <b class="valentine-text">💖 Valentines Date 💖</b>
                 </button>
                 <script
                     src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>

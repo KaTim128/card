@@ -6,37 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go on a Date?</title>
     <style>
+        /* Remove unnecessary horizontal scrolling */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* Centered Layout */
         body {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            font-family: "Pacifico", cursive;
             background-color: #ffeaf7;
+            text-align: center;
+            padding: 15px;
+            box-sizing: border-box;
         }
 
+        /* Optimized Text Styling */
         h2 {
-            font-size: 24px;
+            font-size: 22px;
             color: #212529;
             margin-bottom: 20px;
+            max-width: 80%;
+            line-height: 1.3;
         }
 
+        /* Button Container - Fix Width */
         .btn-container {
             display: flex;
+            flex-direction: row;
             justify-content: center;
-            gap: 50px;
+            gap: 20px;
+            max-width: 220px;
+            /* Prevents unnecessary stretching */
             width: 100%;
         }
 
-        .btn-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
+        /* Button Styling */
         .btn {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             border-radius: 10px;
             border: 2px solid #212529;
@@ -45,14 +60,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100px;
+            height: 45px;
         }
 
-        .btn-yes,
-        .btn-no {
-            width: 120px;
-            height: 50px;
-        }
-
+        /* Yes Button */
         .btn-yes {
             background-color: #66ff66;
             color: #212529;
@@ -62,6 +74,7 @@
             background-color: #44cc44;
         }
 
+        /* No Button */
         .btn-no {
             background-color: #ff6666;
             color: #fff;
@@ -71,53 +84,35 @@
             background-color: #cc4444;
         }
 
-        /* Custom Alert Styles */
-        .custom-alert {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #ffeaf7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            display: none; /* Initially hidden */
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 20px;
+            }
+
+            .btn {
+                width: 90px;
+                height: 40px;
+                font-size: 14px;
+            }
         }
 
-        .custom-alert-content {
-            background: linear-gradient(135deg, #ff66c4, #ffb340);
-            padding: 25px 35px;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            width: 320px;
-            position: relative;
-        }
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 18px;
+            }
 
-        .custom-alert-content p {
-            margin: 15px 0;
-        }
+            .btn-container {
+                flex-direction: column;
+                gap: 15px;
+                max-width: 100%;
+            }
 
-        #customAlertClose {
-            background: white;
-            color: #ff66c4;
-            border: none;
-            padding: 12px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        #customAlertClose:hover {
-            background: #ff66c4;
-            color: white;
+            .btn {
+                width: 100%;
+                height: 50px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -135,14 +130,6 @@
         </div>
     </div>
 
-    <!-- Custom Alert -->
-    <div class="custom-alert" id="customAlert">
-        <div class="custom-alert-content">
-            <p>Yay! Let's go on a date! Kekeke 💕</p>
-            <button id="customAlertClose">OK</button>
-        </div>
-    </div>
-
     <script>
         let yesSize = 120;
         let yesHeight = 50;
@@ -151,9 +138,7 @@
 
         document.getElementById("yesBtn").addEventListener("click", function () {
             localStorage.setItem("dateAccepted", "true");
-
-            // Show the custom alert
-            document.getElementById("customAlert").style.display = "flex";
+            window.location.href = "index.php"; // Directly redirects to index.php
         });
 
         document.getElementById("noBtn").addEventListener("click", function () {
@@ -172,10 +157,6 @@
             document.getElementById("noBtn").style.width = noSize + "px";
             document.getElementById("noBtn").style.height = noHeight + "px";
             document.getElementById("noBtn").style.fontSize = (noHeight / 2.5) + "px";
-        });
-
-        document.getElementById("customAlertClose").addEventListener("click", function () {
-            window.location.href = "index.php"; // Redirect when closing the alert
         });
     </script>
 
