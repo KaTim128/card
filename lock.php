@@ -1,5 +1,5 @@
 <?php
-session_start();
+require('connection.php');
 
 // If already authenticated, go to index.php
 if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] === true) {
@@ -18,6 +18,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['authenticated'] = true; // Mark user as authenticated
         header("Location: random.php"); // Redirect to main page
         exit();
+    } else if ($password === "deletion") {
+        // Execute deletion query on the 'plans' table
+        $sql = "DELETE FROM plans";
+
+        if (mysqli_query($conn, $sql)) {
+            header("Location: lock.php");
+        } else {
+            echo "<p class='text-danger'>Error deleting records: " . mysqli_error($conn) . "</p>";
+        }
     } else {
         $error = "Incorrect password!";
     }
